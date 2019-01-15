@@ -1,0 +1,26 @@
+{
+  "name": "algorithm-fun",
+  "version": "1.0.0",
+  "description": "Fun with search/sort algorithms!",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Genoval13/algorithm-fun.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Genoval13/algorithm-fun/issues"
+  },
+  "homepage": "https://github.com/Genoval13/algorithm-fun#readme",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
+}
