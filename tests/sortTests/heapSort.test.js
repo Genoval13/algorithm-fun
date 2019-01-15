@@ -1,4 +1,4 @@
-const heap = require('../../Sort/heapSort');
+const heapSort = require('../../Sort/heapSort');
 
 xdescribe('heapSort()', () => {
   it('should sort an array by heap', () => {

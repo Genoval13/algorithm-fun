@@ -1,6 +1,6 @@
 const binarySearch = require('../../Search/binary');
 
-describe('binarySearch()', () => {
+xdescribe('binarySearch()', () => {
   it('should search an array to find the given value', () => {
     let arr1 = [1, 2, 3, 4, 5, 6, 7, 8];
 

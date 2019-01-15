@@ -1,46 +1,61 @@
-function heapSort (arr) {
-  buildMaxHeap(arr);
+function heapSort(array) {
+  let heap = buildMaxHeap(array);
 
-  last = arr.length - 1;
+  lastElement = array.length - 1;
 
-  while (last > 0) {
-    swap(arr, 0, last);
+  while(lastElement > 0) {
+    swap(array, 0, lastElement);
 
-    heapify(arr, 0, last);
+    heapify(array, 0, lastElement);
 
-    last -= 1;
+    lastElement -= 1
   }
+  return array;
 }
 
-function buildMaxHeap (arr) {
+function buildMaxHeap(array) {
   let i;
-  i = Math.floor(arr.length / 2) -1;
+  i = array.length / 2 - 1;
+  i = Math.floor(i);
 
   while (i >= 0) {
-    heapify(arr, i, arr.length);
+    heapify(array, i, array.length);
     i -= 1;
   }
 }
 
-function heapify (heap, i, max) {
-  let index, left, right;
-
-  while (i < max) {
+function heapify(heap, i, max) {
+  let index, leftChild, righChild;
+  
+  while(i < max) {
     index = i;
 
-    left = (2 * i) + 1;
-    rigth = left + 1;
+    leftChild = 2*i + 1;
+    righChild = leftChild + 1;
 
-    if (left < max && heap[left] > heap[index]) {
-      index = left;
+    if (leftChild < max && heap[leftChild] > heap[index]) {
+      index = leftChild;
     }
 
-    if (right < max && heap[right] > heap[index]) {
-      index = right;
+    if (righChild < max && heap[righChild] > heap[index]) {
+      index = righChild;
     }
-
-    if (index === i) {
+      
+    if (index == i) {
       return;
     }
+
+    swap(heap,i, index);
+    
+    i = index;
   }
 }
+
+function swap(array, firstItemIndex, lastItemIndex) {
+  let tmp = array[firstItemIndex];
+  
+  array[firstItemIndex] = array[lastItemIndex];
+  array[lastItemIndex] = tmp;
+}
+
+module.exports = heapSort;

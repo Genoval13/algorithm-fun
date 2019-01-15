@@ -1,6 +1,6 @@
-const quick = require('../../Sort/quickSort');
+const quickSort = require('../../Sort/quickSort');
 
-xdescribe('quickSort()', () => {
+describe('quickSort()', () => {
   it('should sort an array by heap', () => {
     let arr1 = [8, 3, 4, 7, 2, 5, 1, 6];
 
